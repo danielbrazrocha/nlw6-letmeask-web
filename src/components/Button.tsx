@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
+import {ButtonHTMLAttributes} from 'react';
 
-type ButtonProps = {
-    text?: string;
-    // adicionando ? a propriedade se torna opcional
-}
+import '../styles/button.scss'
+
+// type ButtonProps = {
+//     text?: string;
+//     // adicionando ? a propriedade se torna opcional
+// }
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 
 
 export default function Button(props: ButtonProps) {
 
-    const [state, setstate] = useState(0)
-
     return (
-            <button onClick={() => setstate(state +1)} >{state}</button>
+            <button className="button" {...props} />
     )
 }

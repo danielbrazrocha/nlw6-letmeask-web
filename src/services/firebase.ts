@@ -22,5 +22,7 @@ firebase.initializeApp(firebaseConfig);
 
 //inicializa variaveis de cada servico a ser utilizado
 //exportando-os para aproveitamento em cada parte do app
-export const auth = firebase.auth();
-export const database = firebase.database();
+const auth = firebase.auth();
+const database = firebase.database();
+
+export { firebase, auth, database }

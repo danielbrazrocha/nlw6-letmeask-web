@@ -8,13 +8,13 @@ import '../styles/button.scss'
 //     // adicionando ? a propriedade se torna opcional
 // }
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
-
-
-
-export function Button(props: ButtonProps) {
-
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+    isOutlined?: boolean
+  };
+  
+  export function Button({ isOutlined = false, ...props }: ButtonProps) {
     return (
-            <button className="button" {...props} />
+      <button className={`button ${isOutlined ? 'outlined' : ''}`} {...props} />
     )
-}
+  }
+

@@ -2,8 +2,8 @@
 import firebase from 'firebase/app'
 
 //recomendacao importar cada servico que ira ser utilizado
-import 'firebase/auth'
-import 'firebase/database'
+import 'firebase/auth';
+import 'firebase/database';
 
 //configuracoes da aplicacao, fornecidades pelo console.firebase.google.com
 const firebaseConfig = {
@@ -25,4 +25,4 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
 
-export { firebase, auth, database }
+export { firebase, auth, database };

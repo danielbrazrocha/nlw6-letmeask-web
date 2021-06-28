@@ -6,6 +6,7 @@ import logoImg from "../assets/images/logo.svg";
 import { Button } from "../components/Button";
 import { Question } from "../components/Question";
 import { RoomCode } from "../components/RoomCode";
+import { AdminBtn } from "../components/AdminBtn";
 import { useAuth } from "../hooks/useAuth";
 import { useRoom } from "../hooks/useRoom";
 import { database } from "../services/firebase";
@@ -70,7 +71,9 @@ export function Room() {
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
+          <AdminBtn teste={roomId}/>
           <RoomCode code={roomId} />
+
         </div>
       </header>
 
